@@ -1,0 +1,62 @@
+<body>
+{{>logo}}
+</body>
+<template name ="logout_btn">
+<div class="logout"><button type="button" href="#" class="btn1 btn-default navbar-btn">Log Out</button></div>
+<div class="gig_btn"><button type="button" href="#" class="btn2 btn-default navbar-btn">Find Gig</button></div>
+<div class="create_btn"><button type="button" href="#" class="btn3 btn-default navbar-btn">Create Gig</button></div>
+</template>
+
+<template name ="logo">
+  <div class = 'logo'><h1>MapGig</h1></div>
+</template>
+
+<template name="home">
+  {{>logout_btn}}
+
+  <p><div class="gigs"><button type="button" class="btn btn-lg">Create Gig</button></div></p>
+  <p><div class="map"><button type="button" class="btn btn-lg">Find Gigs Now</button></div></p>
+</template>
+
+<template name="register">
+
+  <form class="register">
+      <h3> Welcome to Mapgig please register</h3>
+
+
+        <p>Email: <input type="email" name="email"></p>
+        <p>Password: <input type="password" name="password"></p>
+        <p><input type="submit" value="Register"></p>
+    </form>
+</template>
+
+<template name="login">
+
+    <form class="login">
+        <h3>Please Login</h3>
+        <p>Email: <input type="email" name="email"></p>
+        <p>Password: <input type="password" name="password"></p>
+        <p><input type="submit" value="Login"></p>
+    </form>
+</template>
+
+<template name="map">
+{{>logout_btn}}
+  <div class="map-container">
+    {{> googleMap name="map" options=mapOptions}}
+
+    </div>
+
+</template>
+
+<template name="gigs">
+  {{>logout_btn}}
+    <form>
+        <span>Venue</span><input type="text" name="venueName">
+        <span>Band</span><input type="text" name="bandName">
+        <span>Date</span><input type="date" name="date">
+        <span>Time</span><input type="time" name="time">
+        <span>Price</span><input type="number" name="price">
+        <input type="submit" value="Create Gig">
+    </form>
+</template>
