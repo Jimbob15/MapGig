@@ -2,7 +2,7 @@
 {{>logo}}
 </body>
 <template name ="logout_btn">
-<div class="logout"><button type="button" href="#" class="btn1 btn-default navbar-btn">Log Out</button></div>
+
 <div class="gig_btn"><button type="button" href="#" class="btn2 btn-default navbar-btn">Find Gig</button></div>
 <div class="create_btn"><button type="button" href="#" class="btn3 btn-default navbar-btn">Create Gig</button></div>
 </template>
@@ -12,10 +12,10 @@
 </template>
 
 <template name="home">
-  {{>logout_btn}}
-
-  <p><div class="gigs"><button type="button" class="btn btn-lg">Create Gig</button></div></p>
-  <p><div class="map"><button type="button" class="btn btn-lg">Find Gigs Now</button></div></p>
+  <p>Welcome to the homepage of MapGig
+  <br>Please select if you wish to either create a gig or find a local gig through MapGig</p>
+<div class="logout"><button type="button" href="#" class="btn1 btn-default navbar-btn">Log Out</button></div>
+  <div class="home"> {{>logout_btn}}</div>
 </template>
 
 <template name="register">
@@ -41,22 +41,29 @@
 </template>
 
 <template name="map">
-{{>logout_btn}}
+  <p>Below you will find local gigs that have be created by our users</p>
   <div class="map-container">
     {{> googleMap name="map" options=mapOptions}}
-
+   <div class="create_btn"><button type="button" href="#" class="btn3 btn-default navbar-btn">Create Gig</button></div>
+    <div class="logout"><button type="button" href="#" class="btn1 btn-default navbar-btn">Log Out</button></div>
     </div>
 
 </template>
 
 <template name="gigs">
-  {{>logout_btn}}
+  <p>Please fill out the below form in order to create your Gig
+  <br>Once all tabs have be filled click "Create Gig"
+  <br>You can create as many gigs as you wish
+  <br>When finshed select "Find Gig" to view gigs on a map
+  </p>
     <form>
-        <span>Venue</span><input type="text" name="venueName">
-        <span>Band</span><input type="text" name="bandName">
-        <span>Date</span><input type="date" name="date">
-        <span>Time</span><input type="time" name="time">
-        <span>Price</span><input type="number" name="price">
+        <span>Venue</span><input type="text" class="venueName">
+        <span>Band</span><input type="text" class="bandName">
+        <span>Date</span><input type="date" class="date">
+        <span>Time</span><input type="time" class="time">
+        <span>Price</span><input type="number" class="price">
         <input type="submit" value="Create Gig">
+        <div class="gig_btn"><button type="button" href="#" class="btn2 btn-default navbar-btn">Find Gig</button></div>
+        <div class="logout"><button type="button" href="#" class="btn1 btn-default navbar-btn">Log Out</button></div>
     </form>
 </template>

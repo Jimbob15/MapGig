@@ -17,6 +17,15 @@ h1 {
 
 }
 
+p{
+  margin-top:40px;
+  font-family:sans-serif;
+  font-size:20px;
+  color: 	#FFFFFF;
+  text-align: center;
+
+}
+
 .map,.gigs{
   margin: auto;
     width: 100%;
@@ -28,11 +37,12 @@ h1 {
 }
 
 .map-container {
+    max-width: 100%;
     text-align: center;
     color: 	#FF8C00;
     background-color:#000000;
-    width: 500px;
-    height:300px;
+    width: 800px;
+    height:500px;
     padding: 25px;
     margin-left: auto;
     margin-right: auto;
@@ -130,6 +140,18 @@ background-color:#000000;
   text-decoration: none;
 }
 
+.home{
+ position:absolute;
+     width:300px;
+     height:200px;
+     z-index:15;
+     top:50%;
+     left:50%;
+     margin:-100px 0 0 -150px;
+
+
+
+}
 .btn1 {
   position:absolute; top:0; right:0;
   -webkit-border-radius: 0;
@@ -144,7 +166,8 @@ background-color:#000000;
 }
 
 .btn2 {
-  position:absolute; top:0; right:100;
+  float:left;
+  margin-right:5px;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0px;
@@ -152,12 +175,13 @@ background-color:#000000;
   color: #ffffff;
   font-size: 12px;
   background: #FF8C00;
-  padding: 8px 8px 8px 8px;
+  padding: 15px 15px 15px 15px;
   text-decoration: none;
 }
 
 .btn3 {
-  position:absolute; bottom:0; right:-100;
+   float:right;
+   margin-right:5px;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0px;
@@ -165,7 +189,7 @@ background-color:#000000;
   color: #ffffff;
   font-size: 12px;
   background: #FF8C00;
-  padding: 8px 8px 8px 8px;
+  padding: 15px 15px 15px 15px;
   text-decoration: none;
 }
 
